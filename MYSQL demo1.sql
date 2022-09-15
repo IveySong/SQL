@@ -109,6 +109,7 @@ WHERE branch_id =2;
 UPDATE branch 
 SET manager_id=208
 WHERE branch_id =3;
+-- WHERE branch_id<>3; WHERE branch_id BETWEEN 3 AND 5; WHERE manager_id IS NULL 
 
 -- add client data-- 
 INSERT INTO clients VALUES (400, '阿狗', '25334453');
@@ -128,7 +129,7 @@ DESCRIBE work_with;
 
 SELECT * FROM employee
 ORDER BY salary DESC
-LIMIT 3;
+LIMIT 1 OFFSET 4;  -- 从第4行起的一行数据，也就是检索的第5行--
 
 SELECT COUNT(*) FROM employee;
 
